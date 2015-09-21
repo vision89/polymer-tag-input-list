@@ -145,7 +145,7 @@ Example:
 
       paper-fab {
 
-        margin-left: 2em;
+        margin-left: 1em;
         --paper-fab-background: rgb(233, 74, 47);
 
         @apply(--tag-input-fab-button-theme);
@@ -208,13 +208,13 @@ Example:
 
     <div class="row">
 
-      <span class="col-7">
+      <span class="col-8">
 
         <paper-input value="{{newTag}}" label="[[paperInputLabel]]"></paper-input>
 
       </span>
 
-      <span class="col-3">
+      <span class="col-2">
 
         <paper-fab icon="save" on-click="saveClicked" disabled$="[[!newTag]]" animated></paper-fab>
 
