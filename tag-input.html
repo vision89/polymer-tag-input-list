@@ -292,6 +292,7 @@ Example:
 
         this.push( 'inputList', this.newTag );
         this.newTag = '';
+        this.fire( 'tag-input-added' );
 
       }
 
@@ -309,6 +310,7 @@ Example:
       if ( index > -1 ) {
 
         this.splice( 'inputList', index, 1 );
+        this.fire( 'tag-input-removed' );
 
       }
 
