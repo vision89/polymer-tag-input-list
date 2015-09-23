@@ -291,8 +291,8 @@ Example:
       if ( this.inputList.indexOf( this.newTag ) === -1 ) {
 
         this.push( 'inputList', this.newTag );
+        this.fire( 'tag-input-added', this.newTag );
         this.newTag = '';
-        this.fire( 'tag-input-added' );
 
       }
 
@@ -309,8 +309,8 @@ Example:
 
       if ( index > -1 ) {
 
+        this.fire( 'tag-input-removed', this.inputList[index] );
         this.splice( 'inputList', index, 1 );
-        this.fire( 'tag-input-removed' );
 
       }
 
