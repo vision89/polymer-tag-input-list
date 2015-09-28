@@ -17,11 +17,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
 
 <!--
-An element providing a solution to no problem in particular.
+An element that allows you to input a list of tags and remove them.
 
 Example:
 
-    <tag-input></tag-input>
+    <polymer-tag-input-list label="Here is my label" paper-input-label="Tags go here" input-list="{{tags}}">
+      </polymer-tag-input-list>
 
 @group Seed Elements
 @element tag-input
@@ -216,7 +217,7 @@ Example:
 
       <span class="col-2">
 
-        <paper-fab icon="save" on-click="saveClicked" disabled$="[[!newTag]]" animated></paper-fab>
+        <paper-fab icon="save" on-click="_saveClicked" disabled$="[[!newTag]]" animated></paper-fab>
 
       </span>
 
@@ -232,7 +233,7 @@ Example:
 
             <paper-card elevation="1"> 
 
-              <div class="card-content"><span>[[item]]</span> <paper-icon-button icon="highlight-off" on-click="deleteTag"></paper-icon-button> </div>
+              <div class="card-content"><span>[[item]]</span> <paper-icon-button icon="highlight-off" on-click="_deleteTag"></paper-icon-button> </div>
 
             </paper-card>
 
@@ -255,7 +256,10 @@ Example:
     is: 'polymer-tag-input-list',
 
     properties: {
-
+      
+      /**
+       * Text which displays above the input
+       */ 
       label: {
 
         type: String,
@@ -263,7 +267,10 @@ Example:
         notify: false
 
       },
-
+      
+      /**
+       * Text which displays by default inside the input
+       */ 
       paperInputLabel: {
 
         type: String,
@@ -271,7 +278,10 @@ Example:
         notify: false
 
       },
-
+      
+      /**
+       * The list of tags
+       */ 
       inputList: {
 
         type: Array,
@@ -286,7 +296,7 @@ Example:
      * Save button clicked
      * @return {[type]} [description]
      */
-    saveClicked: function () {
+     _saveClicked: function () {
 
       if ( this.inputList.indexOf( this.newTag ) === -1 ) {
 
@@ -303,7 +313,7 @@ Example:
      * @param  {[type]} e [description]
      * @return {[type]}   [description]
      */
-    deleteTag: function ( e ) {
+     _deleteTag: function ( e ) {
 
       var index = this.inputList.indexOf( e.model.item );
 
