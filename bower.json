@@ -1,6 +1,6 @@
 {
-  "name": "tag-input",
-  "version": "1.0.0",
+  "name": "polymer-tag-input-list",
+  "version": "1.0.1",
   "authors": [
     "Dustin Gulley dlgulley411@gmail.com"
   ],
@@ -12,7 +12,7 @@
     "delete",
     "element"
   ],
-  "main": "tag-input.html",
+  "main": "polymer-tag-input-list.html",
   "license": "LICENSE.txt",
   "homepage": "https://github.com/vision89/polymer-tag-input-list.git",
   "ignore": [
