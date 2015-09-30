@@ -1,6 +1,6 @@
 {
   "name": "polymer-tag-input-list",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "authors": [
     "Dustin Gulley dlgulley411@gmail.com"
   ],
@@ -10,7 +10,8 @@
     "tag",
     "input",
     "delete",
-    "element"
+    "element",
+    "web-components"
   ],
   "main": "polymer-tag-input-list.html",
   "license": "LICENSE.txt",
